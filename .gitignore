@@ -1,5 +1,5 @@
-# aur artifacts
-.AURINFO
+# makepkg -S artifacts
+.*INFO
 
 # build artifacts
 status.*
