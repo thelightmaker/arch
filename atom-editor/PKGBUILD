@@ -7,7 +7,7 @@
 
 pkgname=atom-editor
 pkgver=0.178.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Chrome-based text editor from Github"
 arch=('x86_64' 'i686')
 url="https://github.com/atom/atom"
@@ -28,7 +28,7 @@ prepare() {
   patch -Np0 -i "$srcdir/atom-python.patch"
 
   sed -e "s/<%= description %>/$pkgdesc/" \
-    -e "s|<%= installDir %>/share/atom/atom|/usr/bin/atom|"\
+    -e "s|<%= executable %>|/usr/bin/atom|"\
     -e "s|<%= iconName %>|atom|"\
     resources/linux/atom.desktop.in > resources/linux/Atom.desktop
 }
